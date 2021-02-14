@@ -1,94 +1,203 @@
 'use strict';
 {
-  // ## 配列の要素にアクセス
-  // const scores = [80, 90, 100];
-  // scores[2] = 50; //constで定義していても「配列の中の数値」は変更できる。
+//   ## 配列の要素にアクセス
+//   const scores = [80, 90, 100];
+//   scores[2] = 50; //constで定義していても「配列の中の数値」は変更できる。
 
-  // console.log(scores[1]);
+//   console.log(scores[1]);
 
-  // ## 配列とループ処理を組み合わせる
-  // const scores = [10, 20, 30, 40, 4, 5, 6];
+//   ## 配列とループ処理を組み合わせる
+//   const scores = [10, 20, 30, 40, 4, 5, 6];
 
-  // console.log(`Score: ${score[0]}`);
-  // console.log(`Score: ${score[1]}`);
-  // console.log(`Score: ${score[2]}`);
+//   console.log(`Score: ${score[0]}`);
+//   console.log(`Score: ${score[1]}`);
+//   console.log(`Score: ${score[2]}`);
 
-  // for (let i = 0; i < scores.length; i++) {
-  //   console.log(`Score ${i}: ${scores[i]}`);
-  // }
+//   for (let i = 0; i < scores.length; i++) {
+//     console.log(`Score ${i}: ${scores[i]}`);
+//   }
 
-  // ## 配列の要素を変更する
-  // const scores = [10, 20, 30, 40, 50];
-  // scores.push(60, 70);
-  // scores.shift();
-  // // 20, 30, 40, 50, 60, 70
-  // scores.unshift(5);
-  // scores.pop();
-  // // 5, 20, 30, 40, 50, 60, 
+//   ## 配列の要素を変更する
+//   const scores = [10, 20, 30, 40, 50];
+//   scores.push(60, 70);
+//   scores.shift();
+//   // 20, 30, 40, 50, 60, 70
+//   scores.unshift(5);
+//   scores.pop();
+//   // 5, 20, 30, 40, 50, 60, 
 
-  // // ### 追加 // 先頭: unshift, 末尾: push
-  // // ### 削除 // 先頭: shift, 末尾: pop
+//   // ### 追加 // 先頭: unshift, 末尾: push
+//   // ### 削除 // 先頭: shift, 末尾: pop
 
-  // for (let i = 0; i < scores.length; i++) {
-  //   console.log(`Score ${i}: ${scores[i]}`)
-  // }
+//   for (let i = 0; i < scores.length; i++) {
+//     console.log(`Score ${i}: ${scores[i]}`)
+//   }
 
-  // ## splice()で配列を変更する
-  // const scores = [10, 20, 30, 40, 50];
+//   ## splice()で配列を変更する
+//   const scores = [10, 20, 30, 40, 50];
 
-  // scores.splice(1, 2, 15, 25);
-  // // ## splice(開始する位置, 削除する数, 入力する値)
+//   scores.splice(1, 2, 15, 25);
+//   // ## splice(開始する位置, 削除する数, 入力する値)
 
-  // for (let i = 0; i < scores.length; i++) {
-  //   console.log(`Score ${i}: ${scores[i]}`)
-  // }
-  // ## スプレッド構文
-  // const otherScores = [10, 20];
-  // // const scores = [5, 15, 49, 50, ...otherScores]; //...はスプレッド構文と言って、配列の中身を取り出して、別の配列などに加えるときに使う。
-  // // console.log(scores);
+//   for (let i = 0; i < scores.length; i++) {
+//     console.log(`Score ${i}: ${scores[i]}`)
+//   }
+//   ## スプレッド構文
+//   const otherScores = [10, 20];
+//   // const scores = [5, 15, 49, 50, ...otherScores]; //...はスプレッド構文と言って、配列の中身を取り出して、別の配列などに加えるときに使う。
+//   // console.log(scores);
 
-  // function sum(a, b) {
-  //   console.log(a + b);
-  // }
+//   function sum(a, b) {
+//     console.log(a + b);
+//   }
 
-  // sum(...otherScores);
+//   sum(...otherScores);
 
-  // ## 分割代入
-  // const scores = [30, 20, 10, 40];
-  // // const [a, b, c, d] = scores;
+//   ## 分割代入
+//   const scores = [30, 20, 10, 40];
+//   // const [a, b, c, d] = scores;
 
-  // // console.log(a);
-  // // console.log(b);
-  // // console.log(c);
-  // // console.log(d);
+//   // console.log(a);
+//   // console.log(b);
+//   // console.log(c);
+//   // console.log(d);
 
-  // const [a, b, ...others] = scores; //レスト構文
+//   const [a, b, ...others] = scores; //レスト構文
  
-  // console.log(a);
-  // console.log(b);
-  // console.log(others);
+//   console.log(a);
+//   console.log(b);
+//   console.log(others);
 
-  // let x = 50;
-  // let y = 30;
-  // [x, y] = [y, x]; //値の交換
-  // console.log(x);
-  // console.log(y);
+//   let x = 50;
+//   let y = 30;
+//   [x, y] = [y, x]; //値の交換
+//   console.log(x);
+//   console.log(y);
 
-  // ## forEach()を使う
+//   ## forEach()を使う
 
-  // const scores = [10, 20, 30, 40];
-  // scores.forEach((score, index) => { //引数名はなんでも良い。大体配列の単数形の名前になる。(第2引数は、第１引数の要素が何番目か、という値を取り出せる。)
-  //   console.log(`Score ${index}: ${score}`);
-  // });
+//   const scores = [10, 20, 30, 40];
+//   scores.forEach((score, index) => { //引数名はなんでも良い。大体配列の単数形の名前になる。(第2引数は、第１引数の要素が何番目か、という値を取り出せる。)
+//     console.log(`Score ${index}: ${score}`);
+//   });
   
-  // ## map()を使う 
-  // const prices = [100, 130, 150]; //すでにある配列の要素に、なんらかの値を＋したりする時に使う。
-  // const updatePrices = prices.map(price => price * 2)
-  // console.log(updatePrices);
-  const otherScores = [100, 120];
-  const scores = [10, 20, 30, 40, 50, ...otherScores];
-  
-  
-  
+//   ## map()を使う 
+//   const prices = [100, 130, 150]; //すでにある配列の要素に、なんらかの値を＋したりする時に使う。
+//   const updatePrices = prices.map(price => price * 2)
+//   console.log(updatePrices);
+ 
+//   ## filter()を使ってみる
 
+//   const numbers = [1, 2, 3, 4, 5];
+//   const oddNumbers = numbers.filter(number => number % 2 === 1); //本当はif文になっていたのを省略。
+//   console.log(oddNumbers); //奇数だけ抽出してくれる。
+
+//   ## オブジェクトを作る
+//   const point = [100, 180]; //x座標と、y座標を作りたいが、これだと配列の数字が何を示しているのかわかりづらい。
+
+//   const point = {
+//     x: 100, //オブジェクトは波かっこでくくる。このように段を分けると見やすくなる。
+//     y: 180, //プロパティ(x: 100)、キー(x)、値(100)というように、それぞれ名前があることを知る。
+//   };
+//   console.log(point);
+
+//   ## プロパティを操作する
+ 
+//   const point = {
+//     x: 100,
+//     y: 180,
+//   };
+  
+//   point.x = 120;
+//   point.z = 60; //定数名.キー = 値 とするとプロパティが作られる。
+//   delete point.x; //<delete 定数名.キー> で対象のキーを削除できる。 
+
+
+//   console.log(point);
+  
+//   ## オブジェクトを操作する
+//   const otherProps = {
+//     r: 4,
+//     color: 'red',
+//   }
+  
+//   const point = {
+//     x: 100,
+//     y: 180,
+//     ...otherProps, //...スプレッド構文を使って、オブジェクトに代入もできる。
+//   }
+
+//   const {x, r, ...others} = point; //分割代入を使ってキーを定数として扱いたい場合は、対応するキーを指定してオブジェクトを代入する。
+//   console.log(x);
+//   console.log(r);
+//   console.log(others);
+
+//   ## Object.key()を使う
+//   const point = { 
+//     x: 100,
+//     y: 180,
+//   }
+//   const keys = Object.keys(point);
+//   keys.forEach(key => {
+//     console.log(`Key: ${key}, Value: ${point[key]}`)
+//   });
+
+//   ## 変数を代入する
+//   let x = 1;
+//   let y = x;
+//   x = 3;
+//   console.log(x); // 3
+//   console.log(y); // 1
+
+//   let x = [2, 4];
+//   let y = x;
+//   x[0] = 1;
+//   console.log(x); //1, 4
+//   console.log(y); //1, 4 (2, 4となるかと思いきやをそうならないのは、配列の定数などを代入した場合は、その中身までは代入したことにならないから。)
+//   let x = [2, 4];
+//   let y = [...x]; //...スプレッド演算子を使うことで、数値そのものを代入出来る。
+//   x[0] = 1; //なので、このように代入しても、yに代入したxの値は影響を受けない。
+
+//   console.log(x); //1, 4
+//   console.log(y); //2, 4
+//   ## 文字列を操作してみる
+//   const str = "hello";
+//   console.log(str.length); //5
+
+//   // str.substring(開始位置, 終了位置);
+//   console.log(str.substring(3, 5)); //loを取得したい場合
+
+//   ## join(), split()を使ってみる
+//   const d = [2020, 01, 27]; //JSでは、０から始まる数字は別の意味として捉えられるので、エラーになる
+//   const d = [2020, 11, 23];
+
+//   console.log(d.join('/')); //2020/11/23
+//   console.log(d.join('')); //20201123 空文字で指定するとこのようになる。
+
+//   const t = '17:08:23';
+//   console.log(t.split(':')); //["17", "08", "23"]
+  
+//   const [hour, minute, second] = t.split(':'); //分割代入も使える。
+//   console.log(hour); //17
+//   console.log(minute); // 08
+//   console.log(second); // 23
+  // ## 数値を操作してみる
+
+  const scores = [10, 4, 5];
+
+  let sum = 0;
+
+  scores.forEach(score => sum += score);
+
+  console.log(sum); //18
+
+  const avg = sum / scores.length;
+  console.log(avg); // 6.333333333333
+
+  console.log(Math.floor(avg)); //小数点以下切り捨て //6
+  console.log(Math.ceil(avg)); //小数点以下切り上げ //7
+  console.log(Math.round(avg)); //四捨五入 //6
+  console.log(avg.toFixed(3)); //引数に指定した箇所まで表示する。// 6.333
+
+  console.log(Math.random()); //0~1の間でランダムで数字を表示する。
 }
