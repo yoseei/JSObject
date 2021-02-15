@@ -261,4 +261,14 @@
 //   }
 // }
 // showTime();
+  // ## 例外処理を使う
+  const name = 1;
+
+  try { //エラーが出そうな箇所はtyr, catchで囲む。
+    console.log(name.toUpperCase()); //toUpperCaseは文字列にしか使えない。
+  } catch (e) { //引数はerrorのeがよく使われる。
+    console.log(e); //このような記述をすることで、最後のFinished！まで処理を止めずに行く事ができる。
+  }
+
+  console.log('Finished!');
 }
