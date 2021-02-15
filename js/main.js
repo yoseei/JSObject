@@ -236,5 +236,29 @@
   //   console.log('削除しました！');
   // } else {
   //   console.log('キャンセルしました！');
-  }
+  // }
+
+  // ## setInterval()を使う
+  // let i = 0;
+
+  // function showTime() {
+  //   console.log(new Date());
+  //   i++;
+  //   if (i > 2) {
+  //     clearInterval(intervalId);
+  //   }
+  // }
+  // const intervalId = setInterval(showTime, 1000);
+
+// ## setTimeout()を使う
+// let i = 0; 
+// function showTime() {
+//   console.log(new Date());
+//   const timeoutId = setTimeout(showTime, 1000);
+//   i++;
+//   if (i > 2) {
+//     clearTimeout(timeoutId);
+//   }
+// }
+// showTime();
 }
