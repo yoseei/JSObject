@@ -262,13 +262,29 @@
 // }
 // showTime();
   // ## 例外処理を使う
-  const name = 1;
+//   const name = 1;
 
-  try { //エラーが出そうな箇所はtyr, catchで囲む。
-    console.log(name.toUpperCase()); //toUpperCaseは文字列にしか使えない。
-  } catch (e) { //引数はerrorのeがよく使われる。
-    console.log(e); //このような記述をすることで、最後のFinished！まで処理を止めずに行く事ができる。
+//   try { //エラーが出そうな箇所はtyr, catchで囲む。
+//     console.log(name.toUpperCase()); //toUpperCaseは文字列にしか使えない。
+//   } catch (e) { //引数はerrorのeがよく使われる。
+//     console.log(e); //このような記述をすることで、最後のFinished！まで処理を止めずに行く事ができる。
+//   }
+
+//   console.log('Finished!');
+  // ## オブジェクトが複数ある場合
+  const posts = [
+    {
+      text: '今日も元気！',
+      likeCount: 0,
+    },
+    {
+      text: 'やっほー！',
+      likeCount: 0,
+    },
+  ];
+
+  function show(post) {
+    console.log(`${post.text} - ${post.likeCount}`)
   }
-
-  console.log('Finished!');
+  show(posts[1]);
 }
