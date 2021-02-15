@@ -272,19 +272,41 @@
 
 //   console.log('Finished!');
   // ## オブジェクトが複数ある場合
-  const posts = [
-    {
-      text: '今日も元気！',
-      likeCount: 0,
-    },
-    {
-      text: 'やっほー！',
-      likeCount: 0,
-    },
-  ];
+  // const posts = [
+  //   {
+  //     text: '今日も元気！',
+  //     likeCount: 0,
+  //   },
+  //   {
+  //     text: 'やっほー！',
+  //     likeCount: 0,
+  //   },
+  // ];
 
-  function show(post) {
-    console.log(`${post.text} - ${post.likeCount}`)
-  }
-  show(posts[1]);
-}
+  // function show(post) {
+  //   console.log(`${post.text} - ${post.likeCount}`)
+  // }
+  // show(posts[1]);
+
+  // ## メソッドをつかってみよう
+//   const posts = [
+//     {
+//       text: 'やほい',
+//       likeCount: 1,
+//       show() {
+//         console.log(`${this.text} - ${this.likeCount}`); //オブジェクトの中に組み込んだ関数をメソッドと呼ぶ。
+//       },
+//     },
+//     {
+//       text: 'うっひゃー',
+//       likeCount: 1,
+//       show() {
+//         console.log(`${this.text} - ${this.likeCount}`);
+//       },
+//     },
+//   ];
+
+//   posts[0].show();
+//   posts[1].show();
+
+// }
