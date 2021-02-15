@@ -183,21 +183,48 @@
 //   console.log(second); // 23
   // ## 数値を操作してみる
 
-  const scores = [10, 4, 5];
+//   const scores = [10, 4, 5];
 
-  let sum = 0;
+//   let sum = 0;
 
-  scores.forEach(score => sum += score);
+//   scores.forEach(score => sum += score);
 
-  console.log(sum); //18
+//   console.log(sum); //18
 
-  const avg = sum / scores.length;
-  console.log(avg); // 6.333333333333
+//   const avg = sum / scores.length;
+//   console.log(avg); // 6.333333333333
 
-  console.log(Math.floor(avg)); //小数点以下切り捨て //6
-  console.log(Math.ceil(avg)); //小数点以下切り上げ //7
-  console.log(Math.round(avg)); //四捨五入 //6
-  console.log(avg.toFixed(3)); //引数に指定した箇所まで表示する。// 6.333
+//   console.log(Math.floor(avg)); //小数点以下切り捨て //6
+//   console.log(Math.ceil(avg)); //小数点以下切り上げ //7
+//   console.log(Math.round(avg)); //四捨五入 //6
+//   console.log(avg.toFixed(3)); //引数に指定した箇所まで表示する。// 6.333
 
-  console.log(Math.random()); //0~1の間でランダムで数字を表示する。
+//   console.log(Math.random()); //0~1の間でランダムで数字を表示する。
+  // ## ランダムな整数値を作る。
+  // Math.floor(Math.random() * 3); //0, 1, 2
+  // Math.floor(Math.random() * (n + 1)); //0 ~ n
+  // Math.floor(Math.random() * (max + 1 - min)) + min; //0, 1, 2
+  
+  // console.log(Math.floor(Math.random() * (8 + 1 - 2)) + 2); //2 ~ 8
+//  ## 現在日時を扱ってみよう。
+// const d = new Date();
+
+// d.getFullYear(); //現在の年
+// d.getMonth(); //0-11 (Jan: 0, Feb:1, ...)
+// d.getDate(); // 1-31
+// d.getDay(); //0-6 (Sun: 0, Mon:1, ...)
+
+// d.getHours(); //0-23
+// d.getMinutes(); //0-59
+// d.getSeconds(); //0-59
+// d.getMilliseconds(); //0-999 1ms = 1/1000 sec;
+// console.log(`${d.getFullYear()}年 ${d.getMonth() + 1}月 ${d.getDate()}日 ${d.getDay()}曜日`);
+// console.log(`${d.getHours()}時 ${d.getMinutes()}分`);
+
+// ## 特定の日時を扱う
+const d = new Date(2021, 1);
+d.setHours(11, 44, 40);
+d.setDate(15);
+d.setDate(d.getDate() + 3);
+console.log(d);
 }
