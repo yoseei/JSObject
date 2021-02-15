@@ -222,9 +222,19 @@
 // console.log(`${d.getHours()}時 ${d.getMinutes()}分`);
 
 // ## 特定の日時を扱う
-const d = new Date(2021, 1);
-d.setHours(11, 44, 40);
-d.setDate(15);
-d.setDate(d.getDate() + 3);
-console.log(d);
+// const d = new Date(2021, 1);
+// d.setHours(11, 44, 40);
+// d.setDate(15);
+// d.setDate(d.getDate() + 3);
+// console.log(d);
+
+// ## alert(), confirm()を使う
+  // alert('警告');
+
+  // const answer = confirm('削除しますか？');
+  // if (answer) {
+  //   console.log('削除しました！');
+  // } else {
+  //   console.log('キャンセルしました！');
+  }
 }
