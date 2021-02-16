@@ -308,5 +308,165 @@
 
 //   posts[0].show();
 //   posts[1].show();
+  // ## クラスとインスタンス
+  // class Post {
+  //   constructor() { //プロパティはconstructor()というメソッドで初期化する。
+  //     this.text = 'hello'; // クラスから作られるインスタンスをクラス内ではthisというキーワードで表現する。
+  //     this.likeCount = 1;
+  //   }
+  //   show() { ... },
+  // } //この形を「クラス」と呼ぶ。class名は慣習的に先頭を大文字にする。
+  // こういったクラスから作られるオブジェクトのことを「インスタンス」と呼ぶ。
 
-// }
+  // ## クラスをつくってみよう
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 1;
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount}`);
+  //   }
+  // }
+  // const posts = [
+  //   new Post('hello world'),
+  //   new Post('こんにちは'),
+  // ];
+  // posts[0].show();
+  // posts[1].show();
+  // ## カプセル化を理解しよう。
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0;
+  //   }
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes!`);
+  //   }
+  //   like() {
+  //     this.likeCount++;
+  //     this.show();
+  //   }
+  // }
+
+  // const posts = [
+  //   new Post(`Hello World!`),
+  //   new Post(`こんにちは！`),
+  // ];
+
+  // posts[0].like();
+  
+  // // posts[0].show();
+
+  // ## 静的メソッド
+  // class Post {
+  //   constructor(text) {
+  //     this.text = text;
+  //     this.likeCount = 0; 
+  //   }
+
+  //   show() {
+  //     console.log(`${this.text} - ${this.likeCount} likes!`);
+  //   }
+  //   like() {
+  //     this.likeCount++;
+  //     this.show();
+  //   }
+
+  //   static showInfo() {
+  //     console.log('Post class version 1.0');
+  //   }
+  // }
+
+  // const posts = [
+  //   new Post('Hello World'),
+  //   new Post('こんにちは！'),
+  // ];
+
+  // posts[0].like();
+  // Post.showInfo();
+  // ## クラスの拡張
+//   class Post {
+//     constructor(text) {
+//       this.text = text;
+//       this.likeCount = 0; 
+//     }
+
+//     show() {
+//       console.log(`${this.text} - ${this.likeCount} likes!`);
+//     }
+
+//     like() {
+//       this.likeCount++;
+//       this.show();
+//     }
+
+//   }
+
+//   class SponsoredPost {
+//     constructor(text, sponsor) {
+//       this.text = text;
+//       this.likeCount = 0; 
+//       this.sponsor = sponsor;
+//     }
+
+//     show() {
+//       console.log(`${this.text} - ${this.likeCount} likes!`);
+//       console.log(`...sponsored by ${this.sponsor}`);
+//     }
+
+//     like() {
+//       this.likeCount++;
+//       this.show();
+//     }
+
+//   }
+
+//   const posts = [
+//     new Post('Hello World!'),
+//     new Post('こんにちは！'),
+//     new SponsoredPost('3分動画でマスターしよう！', 'dotinstall'),
+//   ];
+//   posts[2].show();
+//   posts[2].like();
+//   // posts[0].like();
+//   // Post.showInfo();
+  // ## クラスの継承
+  class Post {
+    constructor(text) {
+      this.text = text;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount} likes!`);
+    }
+
+    like() {
+      this.likeCount++;
+      this.show();
+    }
+  }
+
+  class SponsoredPost extends Post{
+    constructor(text, sponsor) {
+      super(text);
+      this.sponsor = sponsor;
+    }
+
+    show() {
+      super.show();
+      console.log(`...sponsored by ${this.sponsor}`);
+    }
+
+  }
+  const posts = [
+    new Post('Hello World!'),
+    new Post('こんにちは！'),
+    new SponsoredPost('3分動画でマスターしよう！', 'dotinstall'),
+  ];
+
+  posts[2].show();
+  posts[2].like();
+}
